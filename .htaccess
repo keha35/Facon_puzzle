@@ -1,0 +1,50 @@
+# Protection du fichier de configuration
+<Files "config.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Protection du dossier includes
+<Files "includes/*">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Activation de la réécriture d'URL
+RewriteEngine On
+RewriteBase /Facon_puzzle-new/
+
+# Redirection vers HTTPS (à décommenter en production)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Gestion des erreurs
+ErrorDocument 404 /Facon_puzzle-new/includes/pages/404.php
+ErrorDocument 403 /Facon_puzzle-new/includes/pages/403.php
+
+# Protection contre l'affichage du contenu des répertoires
+Options -Indexes
+
+# Compression GZIP
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript
+</IfModule>
+
+# Cache des fichiers statiques
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
+# Protection XSS et autres
+<IfModule mod_headers.c>
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule> 
