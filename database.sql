@@ -105,6 +105,24 @@ CREATE TABLE reviews (
     FOREIGN KEY (order_id) REFERENCES orders(id)
 );
 
+-- Table des paramètres du site
+CREATE TABLE settings (
+    `key` VARCHAR(50) PRIMARY KEY,
+    `value` TEXT,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Insertion des paramètres par défaut
+INSERT INTO settings (`key`, `value`) VALUES
+('site_name', 'Façon Puzzle'),
+('site_description', 'Créez vos puzzles personnalisés ou choisissez parmi notre sélection de puzzles uniques'),
+('contact_email', 'contact@faconpuzzle.fr'),
+('contact_phone', '01 23 45 67 89'),
+('shipping_base_cost', '5.90'),
+('shipping_free_threshold', '49'),
+('points_per_euro', '1'),
+('points_discount_rate', '100');
+
 -- Index pour améliorer les performances
 CREATE INDEX idx_products_active ON products(is_active);
 CREATE INDEX idx_orders_user ON orders(user_id);
