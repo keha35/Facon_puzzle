@@ -5,7 +5,7 @@
 - [ ] Mise en place de l'environnement de développement
   * [x] Installation de XAMPP/PHP
   * [x] Configuration de la base de données MySQL
-  * [ ] Installation des dépendances nécessaires
+  * [x] Installation des dépendances nécessaires
 - [ ] Création de la structure du projet
   * [ ] Organisation des dossiers (MVC)
   * [ ] Configuration du routeur
