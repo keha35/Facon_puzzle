@@ -3,8 +3,8 @@
 ## 1. Configuration initiale du projet
 
 - [ ] Mise en place de l'environnement de développement
-  * [ ]  Installation de XAMPP/PHP
-  * [ ] Configuration de la base de données MySQL
+  * [x] Installation de XAMPP/PHP
+  * [x] Configuration de la base de données MySQL
   * [ ] Installation des dépendances nécessaires
 - [ ] Création de la structure du projet
   * [ ] Organisation des dossiers (MVC)
