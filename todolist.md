@@ -1,154 +1,172 @@
 # Liste des tâches pour le projet Façon Puzzle
 
-## Configuration initiale du projet
-- [x] Mise en place de l'environnement de développement
-  * Installation de XAMPP/WAMP pour le développement local
-  * Configuration de PHP 8.x
-  * Mise en place de MySQL (InnoDB)
-  * Configuration du virtual host
-  * Mise en place du système de contrôle de version (Git)
-- [x] Structure du projet
-  * Création des dossiers (assets, includes, admin, etc.)
-  * Mise en place des fichiers de configuration
-  * Configuration de la base de données
-- [x] Préparation pour l'hébergement
-  * Vérification des prérequis OVH
-  * Documentation des étapes de déploiement
-  * Création des scripts de migration
+## 1. Configuration initiale du projet
 
-## Structure de base
-- [x] Création de la structure MVC
-  * Modèles pour les produits, utilisateurs, commandes
-  * Contrôleurs pour chaque section
-  * Vues pour chaque page
-- [x] Mise en place du système d'authentification
-  * Inscription/Connexion
-  * Gestion des sessions
-  * Récupération de mot de passe
+- [ ] Mise en place de l'environnement de développement
+  * [ ]  Installation de XAMPP/PHP
+  * [ ] Configuration de la base de données MySQL
+  * [ ] Installation des dépendances nécessaires
+- [ ] Création de la structure du projet
+  * [ ] Organisation des dossiers (MVC)
+  * [ ] Configuration du routeur
+  * [ ] Mise en place des fichiers de configuration
+- [ ] **Spécifications techniques**
+  * [ ] Choix du framework backend (par exemple, Laravel, Symfony)
+  * [ ] Choix du framework frontend (par exemple, Vue.js, React)
+  * [ ] Sélection des bibliothèques pour les fonctionnalités spécifiques (par exemple, Three.js pour la 3D)
 
-## Page d'accueil
-- [x] Développement de l'interface principale
-  * Animation des pièces de puzzle pour les boutons
-  * Intégration des liens (Vos créations, Catalogue, Qui sommes-nous)
-  * Animation de la pièce de puzzle flottante
-- [x] Intégration des icônes du header
-  * Panier
-  * Mon compte
+## 2. Développement Frontend
 
-## Page "Vos créations"
-- [x] Système d'upload d'images
-  * Validation des formats
-  * Vérification de la qualité
-  * Système de recadrage
-- [x] Interface de personnalisation
-  * Sélection de la forme (rectangle/rond)
-  * Détection automatique de l'orientation
-  * Liste déroulante du nombre de pièces
-  * Sélection de la couleur du carton
-  * Choix de la matrice
-- [x] Visualisation 3D
-  * Intégration d'un moteur 3D
-  * Contrôles de rotation
-  * Superposition de la matrice
-- [ ] Système de validation
-  * Vérification de la qualité
-  * Interface administrateur pour validation manuelle des BAT
-  * Génération de BAT PDF
-  * Notifications par email (client et admin)
-  * Système de suivi des validations
+### Page d'accueil
 
-## Page "Notre catalogue"
-- [x] Système de filtrage
-  * Tri par prix
-  * Tri par nombre de pièces
-  * Tri par date
-- [x] Recherche avancée
-  * Filtres par format
-  * Filtres par difficulté
-  * Filtres par prix
-  * Filtres par nombre de pièces
-- [ ] Affichage des produits
-  * Grille de produits
-  * Pagination
-  * Vue détaillée
+- [ ] Création du layout principal
+  * [ ] Header avec navigation
+  * [ ] Footer avec informations légales
+- [ ] Implémentation des boutons style puzzle
+  * [ ] Animation CSS des pièces
+  * [ ] Effets de hover
+- [ ] Intégration des icônes panier/compte
+- [ ] Animation de la pièce de puzzle décorative
+- [ ] **Détails de l'interface utilisateur**
+  * [ ] Création de maquettes pour chaque page
+  * [ ] Définition de la charte graphique (couleurs, polices, etc.)
+  * [ ] Conception des composants réutilisables (boutons puzzle, etc.)
 
-## Page Panier
-- [x] Gestion du panier
-  * Ajout/Suppression d'articles
-  * Mise à jour des quantités
-  * Calcul des totaux
-  * Sauvegarde du panier en session
+### Page "Vos créations"
+
+- [ ] Système d'upload d'images
+  * [ ] Validation des formats acceptés
+  * [ ] Vérification de la qualité/taille
+- [ ] Interface de personnalisation
+  * [ ] Sélecteur de forme
+  * [ ] Choix du nombre de pièces
+  * [ ] Sélection des couleurs
+  * [ ] Choix des matrices
+- [ ] Visualisation 3D
+  * [ ] Intégration d'un moteur 3D
+  * [ ] Prévisualisation en temps réel
+- [ ] Système de validation de commande
+- [ ] **Fonctionnalités spécifiques**
+  * [ ] Implémentation du système de détection automatique de l'orientation de l'image
+  * [ ] Développement du système de superposition de matrice sur l'aperçu du puzzle
+
+### Page "Notre catalogue"
+
+- [ ] Interface de navigation
+  * [ ] Filtres de recherche
+  * [ ] Système de tri
+  * [ ] Pagination
+- [ ] Fiches produits
+  * [ ] Galerie d'images
+  * [ ] Description détaillée
+  * [ ] Prix et disponibilité
+
+### Page "Panier"
+
+- [ ] Gestion du panier
+  * [ ] Ajout/Suppression d'articles
+  * [ ] Modification des quantités
+  * [ ] Calcul automatique du total
 - [ ] Processus de commande
-  * Formulaire d'adresse
-  * Structure modulaire pour intégration future du système de paiement
-  * Génération de devis PDF
-  * Confirmation de commande par email
+  * [ ] Formulaire de livraison
+  * [ ] Intégration du système de paiement
+  * [ ] Confirmation de commande
+- [ ] **Intégrations externes**
+  * [ ] Intégration d'un système de paiement (par exemple, Stripe, PayPal)
 
-## Espace Client
-- [x] Programme de fidélité
-  * Système de points
-  * Calcul des réductions
-  * Option de don WWF
-- [x] Système de parrainage
-  * Génération des codes
-  * Application des réductions
-- [ ] Fonctionnalités du compte
-  * Suivi de commande
-  * Historique des achats
-  * Liste de souhaits
-  * Système de commentaires
-- [ ] Mini-jeu des objets cachés
-  * Intégration des objets dans le site
-  * Système de collection
-  * Page de progression
+### Page "Mon compte"
 
-## Administration
-- [ ] Interface administrateur
-  * Gestion des produits
-  * Configuration des paramètres
-  * Gestion des stocks
-  * Modération des commentaires
+- [ ] Système d'authentification
+  * [ ] Inscription/Connexion
+  * [ ] Récupération de mot de passe
+- [ ] Fonctionnalités utilisateur
+  * [ ] Programme de fidélité
+  * [ ] Système de parrainage
+  * [ ] Suivi de commandes
+  * [ ] Liste de souhaits
+- [ ] Système de commentaires
+  * [ ] Ajout/Modification
+  * [ ] Notation des produits
+- [ ] Développement du système d'objets cachés à collectionner sur le site
+
+## 3. Développement Backend
+
+### Base de données
+
+- [ ] Conception du schéma
+  * [ ] Tables utilisateurs
+  * [ ] Tables produits
+  * [ ] Tables commandes
+  * [ ] Tables configurations
+- [ ] Implémentation des requêtes
+  * [ ] CRUD utilisateurs
+  * [ ] CRUD produits
+  * [ ] Gestion des commandes
+
+### Interface d'administration
+
 - [ ] Tableau de bord
-  * Statistiques de ventes
-  * Gestion des commandes
-  * Suivi des stocks
-  * Rapports
+  * [ ] Statistiques de ventes
+  * [ ] Suivi des stocks
+  * [ ] Alertes système
+- [ ] Gestion des produits
+  * [ ] Interface CRUD
+  * [ ] Gestion des images
+  * [ ] Configuration des prix
+- [ ] Gestion des utilisateurs
+  * [ ] Liste des clients
+  * [ ] Historique des commandes
+  * [ ] Modération des commentaires
 
-## Structure Frontend
-- [x] Mise en place des templates
-  * Structure HTML5 responsive
-  * Feuilles de style CSS modulaires
-  * Intégration de Three.js pour la visualisation 3D
-  * JavaScript pour les animations et interactions
-- [x] Optimisation frontend
-  * Minification des assets
-  * Optimisation des images
-  * Gestion du responsive design
+## 4. Sécurité et Performance
 
-## Tests et Déploiement
-- [ ] Phase de test
-  * Tests unitaires avec PHPUnit
-  * Tests d'intégration
-  * Tests de performance avec Apache JMeter
-  * Tests de sécurité (XSS, CSRF, SQL Injection)
-- [x] Déploiement
-  * Configuration du serveur OVH
-  * Scripts de déploiement automatisé
-  * Migration des données
-  * Tests en production
-  * Monitoring avec NewRelic ou alternative
-- [x] Optimisation
-  * Mise en cache avec Redis/Memcached
-  * Optimisation des images
-  * Minification des assets (JS/CSS)
-  * Compression GZIP
+- [ ] Sécurisation
+  * [ ] Protection contre les injections SQL
+  * [ ] Validation des formulaires
+  * [ ] Sécurisation des sessions
+- [ ] Optimisation
+  * [ ] Cache des images
+  * [ ] Minification des assets
+  * [ ] Optimisation des requêtes
+- [ ] **Aspects légaux et conformité**
+  * [ ] Rédaction des conditions générales de vente
+  * [ ] Mise en place de la politique de confidentialité (RGPD)
+  * [ ] Gestion des droits d'auteur pour les images uploadées
+- [ ] **Optimisation pour les moteurs de recherche (SEO)**
+  * [ ] Mise en place de métadonnées optimisées
+  * [ ] Création d'un sitemap
+  * [ ] Optimisation des URLs
 
-## Documentation
-- [x] Documentation technique
-  * Architecture du système
-  * Guide de maintenance
-  * Documentation API
-- [x] Documentation utilisateur
-  * Guide d'utilisation
-  * FAQ
-  * Tutoriels 
+## 5. Tests et Déploiement
+
+- [ ] Tests
+  * [ ] Tests unitaires
+  * [ ] Tests d'intégration
+  * [ ] Tests de charge
+- [ ] Déploiement
+  * [ ] Configuration du serveur
+  * [ ] Migration de la base de données
+  * [ ] Mise en production
+- [ ] **Intégrations externes (suite)**
+  * [ ] Mise en place d'un système d'envoi d'emails (pour les BAT, confirmations, etc.)
+  * [ ] Intégration avec un système de suivi de colis
+
+## 6. Documentation
+
+- [ ] Documentation technique
+  * [ ] Architecture du projet
+  * [ ] API endpoints
+  * [ ] Procédures de déploiement
+- [ ] Documentation utilisateur
+  * [ ] Guide d'utilisation
+  * [ ] FAQ
+  * [ ] Tutoriels
+- [ ] **Accessibilité**
+  * [ ] Vérification de la conformité aux normes WCAG
+  * [ ] Test avec des lecteurs d'écran
+- [ ] **Internationalisation**
+  * [ ] Préparation du système pour la prise en charge de plusieurs langues
+  * [ ] Configuration des devises multiples
+- [ ] **Analytics et suivi des performances**
+  * [ ] Intégration d'un outil d'analyse (par exemple, Google Analytics)
+  * [ ] Mise en place de KPIs pour suivre les performances du site
