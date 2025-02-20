@@ -34,21 +34,21 @@
 
 ### Page "Vos créations"
 
-- [ ] Système d'upload d'images
-  * [ ] Validation des formats acceptés
-  * [ ] Vérification de la qualité/taille
-- [ ] Interface de personnalisation
-  * [ ] Sélecteur de forme
-  * [ ] Choix du nombre de pièces
-  * [ ] Sélection des couleurs
-  * [ ] Choix des matrices
-- [ ] Visualisation 3D
-  * [ ] Intégration d'un moteur 3D
-  * [ ] Prévisualisation en temps réel
-- [ ] Système de validation de commande
-- [ ] **Fonctionnalités spécifiques**
-  * [ ] Implémentation du système de détection automatique de l'orientation de l'image
-  * [ ] Développement du système de superposition de matrice sur l'aperçu du puzzle
+- [x] Système d'upload d'images
+  * [x] Validation des formats acceptés
+  * [x] Vérification de la qualité/taille
+- [x] Interface de personnalisation
+  * [x] Sélecteur de forme
+  * [x] Choix du nombre de pièces
+  * [x] Sélection des couleurs
+  * [x] Choix des matrices
+- [x] Visualisation 3D
+  * [x] Intégration d'un moteur 3D
+  * [x] Prévisualisation en temps réel
+- [x] Système de validation de commande
+- [x] **Fonctionnalités spécifiques**
+  * [x] Implémentation du système de détection automatique de l'orientation de l'image
+  * [x] Développement du système de superposition de matrice sur l'aperçu du puzzle
 
 ### Page "Notre catalogue"
 
