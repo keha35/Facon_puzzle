@@ -43,12 +43,19 @@
   * [x] Sélection des couleurs
   * [x] Choix des matrices
 - [x] Visualisation 3D
-  * [x] Intégration d'un moteur 3D
+  * [x] Intégration de Three.js
+  * [x] Contrôles de rotation
   * [x] Prévisualisation en temps réel
-- [x] Système de validation de commande
-- [x] **Fonctionnalités spécifiques**
-  * [x] Implémentation du système de détection automatique de l'orientation de l'image
-  * [x] Développement du système de superposition de matrice sur l'aperçu du puzzle
+  * [x] Gestion des textures
+- [x] Validation de commande
+  * [x] Calcul du prix
+  * [x] Ajout au panier
+  * [x] Sauvegarde du projet
+- [x] **Fonctionnalités avancées**
+  * [x] Détection automatique de l'orientation de l'image
+  * [x] Développement des matrices de découpe
+  * [x] Optimisation des performances 3D
+  * [x] Gestion du responsive
 
 ### Page "Notre catalogue"
 
@@ -98,30 +105,52 @@
 
 ### Base de données
 
-- [ ] Conception du schéma
-  * [ ] Tables utilisateurs
-  * [ ] Tables produits
-  * [ ] Tables commandes
-  * [ ] Tables configurations
-- [ ] Implémentation des requêtes
-  * [ ] CRUD utilisateurs
-  * [ ] CRUD produits
-  * [ ] Gestion des commandes
+- [x] Système de gestion des images
+  * [x] Upload sécurisé
+  * [x] Redimensionnement automatique
+  * [x] Stockage optimisé
+- [x] Base de données
+  * [x] Création des tables
+  * [x] Relations entre les entités
+  * [x] Indexation pour les performances
+- [x] API REST
+  * [x] Endpoints pour l'upload
+  * [x] Endpoints pour la personnalisation
+  * [x] Endpoints pour la commande
+- [x] Sécurité
+  * [x] Validation des entrées
+  * [x] Protection CSRF
+  * [x] Gestion des sessions
 
 ### Interface d'administration
 
-- [ ] Tableau de bord
-  * [ ] Statistiques de ventes
-  * [ ] Suivi des stocks
-  * [ ] Alertes système
+- [ ] Dashboard
+  * [ ] Statistiques des ventes
+  * [ ] Suivi des commandes
+  * [ ] Gestion des stocks
 - [ ] Gestion des produits
-  * [ ] Interface CRUD
-  * [ ] Gestion des images
-  * [ ] Configuration des prix
+  * [ ] Ajout/modification/suppression
+  * [ ] Gestion des catégories
+  * [ ] Gestion des prix
 - [ ] Gestion des utilisateurs
   * [ ] Liste des clients
   * [ ] Historique des commandes
-  * [ ] Modération des commentaires
+  * [ ] Gestion des droits
+
+### Système de paiement
+
+- [ ] Intégration Stripe
+  * [ ] Configuration de l'API
+  * [ ] Gestion des webhooks
+  * [ ] Tests de paiement
+- [ ] Gestion des commandes
+  * [ ] Workflow de validation
+  * [ ] Emails de confirmation
+  * [ ] Suivi de livraison
+- [ ] Sécurité des transactions
+  * [ ] Cryptage des données
+  * [ ] Conformité RGPD
+  * [ ] Journalisation
 
 ## 4. Sécurité et Performance
 
@@ -144,17 +173,18 @@
 
 ## 5. Tests et Déploiement
 
-- [ ] Tests
-  * [ ] Tests unitaires
-  * [ ] Tests d'intégration
-  * [ ] Tests de charge
+- [ ] Tests unitaires
+  * [ ] Backend (PHP)
+  * [ ] Frontend (Vue.js)
+  * [ ] API REST
+- [ ] Tests d'intégration
+  * [ ] Parcours utilisateur
+  * [ ] Performance
+  * [ ] Sécurité
 - [ ] Déploiement
-  * [ ] Configuration du serveur
-  * [ ] Migration de la base de données
+  * [ ] Configuration serveur
   * [ ] Mise en production
-- [ ] **Intégrations externes (suite)**
-  * [ ] Mise en place d'un système d'envoi d'emails (pour les BAT, confirmations, etc.)
-  * [ ] Intégration avec un système de suivi de colis
+  * [ ] Monitoring
 
 ## 6. Documentation
 

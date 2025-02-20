@@ -1,203 +1,226 @@
 <template>
   <div class="image-upload">
-    <div 
-      class="upload-zone"
-      @dragover.prevent="handleDragOver"
+    <!-- Zone de drop -->
+    <div
+      class="drop-zone"
+      :class="{ 
+        'drop-zone--active': isDragging,
+        'drop-zone--has-image': !!preview
+      }"
+      @dragenter.prevent="handleDragEnter"
       @dragleave.prevent="handleDragLeave"
+      @dragover.prevent
       @drop.prevent="handleDrop"
-      :class="{ 'dragging': isDragging }"
+      @click="triggerFileInput"
     >
-      <div v-if="!preview" class="upload-placeholder">
-        <i class="fas fa-cloud-upload-alt text-4xl mb-4"></i>
-        <p class="text-lg font-semibold mb-2">Déposez votre image ici</p>
-        <p class="text-sm text-gray-500 mb-4">ou</p>
-        <label class="btn-primary cursor-pointer">
-          Parcourir
-          <input 
-            type="file" 
-            class="hidden" 
-            accept="image/*"
-            @change="handleFileSelect"
-          >
-        </label>
-        <p class="text-sm text-gray-500 mt-4">
-          Formats acceptés : JPG, PNG, GIF (max. 10 Mo)
-        </p>
-      </div>
-      
-      <div v-else class="preview-container">
-        <img :src="preview" alt="Aperçu" class="preview-image">
-        <div class="preview-actions">
-          <button class="btn-secondary" @click="removeImage">
-            Changer l'image
-          </button>
-          <button class="btn-primary" @click="validateAndContinue">
-            Continuer
-          </button>
+      <input
+        ref="fileInput"
+        type="file"
+        accept="image/*"
+        class="hidden"
+        @change="handleFileSelect"
+      >
+
+      <template v-if="!preview">
+        <div class="drop-zone__content">
+          <i class="fas fa-cloud-upload-alt text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">
+            Glissez-déposez votre image ici
+          </h3>
+          <p class="text-sm text-gray-500 mb-4">
+            ou cliquez pour sélectionner un fichier
+          </p>
+          <PuzzleButton variant="primary" size="lg">
+            Parcourir
+          </PuzzleButton>
+        </div>
+      </template>
+
+      <template v-else>
+        <div class="preview-container">
+          <img :src="preview" alt="Aperçu" class="preview-image">
+          <div class="preview-overlay">
+            <PuzzleButton 
+              variant="secondary" 
+              size="sm"
+              @click.stop="changeImage"
+            >
+              Changer l'image
+            </PuzzleButton>
+          </div>
+        </div>
+      </template>
+    </div>
+
+    <!-- Informations techniques -->
+    <div class="technical-info">
+      <div class="grid grid-cols-3 gap-4 text-sm text-gray-600">
+        <div>
+          <i class="fas fa-file-image mr-2"></i>
+          Formats acceptés : JPG, PNG
+        </div>
+        <div>
+          <i class="fas fa-weight-hanging mr-2"></i>
+          Taille maximale : 10 Mo
+        </div>
+        <div>
+          <i class="fas fa-expand-arrows-alt mr-2"></i>
+          Dimensions recommandées : min 2000x2000px
         </div>
       </div>
     </div>
 
+    <!-- Messages d'erreur -->
     <div v-if="error" class="error-message">
+      <i class="fas fa-exclamation-circle mr-2"></i>
       {{ error }}
+    </div>
+
+    <!-- Boutons de navigation -->
+    <div class="navigation-buttons">
+      <PuzzleButton
+        variant="primary"
+        size="lg"
+        :disabled="!canProceed"
+        @click="handleNext"
+        :loading="isLoading"
+      >
+        Suivant
+        <i class="fas fa-arrow-right ml-2"></i>
+      </PuzzleButton>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue';
+import { useCreationStore } from '../../../stores/creation';
+import PuzzleButton from '../../ui/PuzzleButton.vue';
 
-const emit = defineEmits(['next-step', 'update:stepData'])
-const props = defineProps({
-  stepData: {
-    type: Object,
-    default: () => ({})
-  }
-})
+const store = useCreationStore();
+const fileInput = ref(null);
+const isDragging = ref(false);
+const preview = ref(null);
 
-const preview = ref(props.stepData.preview || '')
-const error = ref('')
-const isDragging = ref(false)
+const canProceed = computed(() => store.canProceed);
+const isLoading = computed(() => store.isLoading);
+const error = computed(() => store.error);
 
-const validateFile = (file) => {
-  const maxSize = 10 * 1024 * 1024 // 10 Mo
-  const validTypes = ['image/jpeg', 'image/png', 'image/gif']
-
-  if (!validTypes.includes(file.type)) {
-    throw new Error('Format de fichier non supporté')
-  }
-
-  if (file.size > maxSize) {
-    throw new Error('L\'image ne doit pas dépasser 10 Mo')
-  }
+function triggerFileInput() {
+  fileInput.value.click();
 }
 
-const handleFileSelect = (event) => {
-  const file = event.target.files[0]
-  if (file) {
-    processFile(file)
+function handleDragEnter() {
+  isDragging.value = true;
+}
+
+function handleDragLeave() {
+  isDragging.value = false;
+}
+
+async function processFile(file) {
+  if (!file) return;
+
+  // Vérification du type de fichier
+  if (!file.type.startsWith('image/')) {
+    store.error = 'Le fichier doit être une image';
+    return;
   }
-}
 
-const handleDragOver = (event) => {
-  isDragging.value = true
-}
-
-const handleDragLeave = (event) => {
-  isDragging.value = false
-}
-
-const handleDrop = (event) => {
-  isDragging.value = false
-  const file = event.dataTransfer.files[0]
-  if (file) {
-    processFile(file)
+  // Vérification de la taille
+  if (file.size > 10 * 1024 * 1024) {
+    store.error = 'L\'image ne doit pas dépasser 10 Mo';
+    return;
   }
-}
 
-const processFile = async (file) => {
   try {
-    error.value = ''
-    validateFile(file)
-
-    const reader = new FileReader()
-    reader.onload = (e) => {
-      preview.value = e.target.result
-      emit('update:stepData', { 
-        preview: preview.value,
-        file: file
-      })
-    }
-    reader.readAsDataURL(file)
-  } catch (err) {
-    error.value = err.message
+    // Création de l'aperçu
+    preview.value = URL.createObjectURL(file);
+    
+    // Upload de l'image
+    await store.uploadImage(file);
+  } catch (e) {
+    console.error(e);
   }
 }
 
-const removeImage = () => {
-  preview.value = ''
-  emit('update:stepData', {})
+function handleDrop(e) {
+  isDragging.value = false;
+  const file = e.dataTransfer.files[0];
+  processFile(file);
 }
 
-const validateAndContinue = () => {
-  if (preview.value) {
-    emit('next-step')
-  } else {
-    error.value = 'Veuillez sélectionner une image'
-  }
+function handleFileSelect(e) {
+  const file = e.target.files[0];
+  processFile(file);
+}
+
+function changeImage() {
+  preview.value = null;
+  store.reset();
+  triggerFileInput();
+}
+
+function handleNext() {
+  store.nextStep();
 }
 </script>
 
 <style scoped>
 .image-upload {
-  width: 100%;
+  @apply space-y-8;
 }
 
-.upload-zone {
-  border: 2px dashed #e2e8f0;
-  border-radius: 0.5rem;
-  padding: 2rem;
-  text-align: center;
-  transition: all 0.3s ease;
+.drop-zone {
+  @apply border-2 border-dashed border-gray-300 rounded-lg p-8 
+         flex items-center justify-center min-h-[400px] 
+         transition-all duration-200 cursor-pointer 
+         hover:border-primary hover:bg-primary/5;
 }
 
-.upload-zone.dragging {
-  border-color: #3498db;
-  background-color: rgba(52, 152, 219, 0.05);
+.drop-zone--active {
+  @apply border-primary bg-primary/10;
 }
 
-.upload-placeholder {
-  color: #64748b;
+.drop-zone--has-image {
+  @apply border-solid border-primary p-4;
+}
+
+.drop-zone__content {
+  @apply text-center space-y-4;
 }
 
 .preview-container {
-  max-width: 600px;
-  margin: 0 auto;
+  @apply relative w-full h-full;
 }
 
 .preview-image {
-  max-width: 100%;
-  max-height: 400px;
-  object-fit: contain;
-  margin-bottom: 1rem;
+  @apply w-full h-full object-contain rounded-lg;
 }
 
-.preview-actions {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
+.preview-overlay {
+  @apply absolute inset-0 bg-black/50 opacity-0 
+         flex items-center justify-center transition-opacity 
+         duration-200;
 }
 
-.btn-primary {
-  background: #3498db;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+.preview-container:hover .preview-overlay {
+  @apply opacity-100;
 }
 
-.btn-primary:hover {
-  background: #2980b9;
-}
-
-.btn-secondary {
-  background: #e2e8f0;
-  color: #475569;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
-.btn-secondary:hover {
-  background: #cbd5e1;
+.technical-info {
+  @apply bg-gray-50 rounded-lg p-4;
 }
 
 .error-message {
-  color: #e74c3c;
-  margin-top: 1rem;
-  text-align: center;
-  font-weight: 500;
+  @apply text-red-500 bg-red-50 p-4 rounded-lg;
+}
+
+.navigation-buttons {
+  @apply flex justify-end mt-8;
+}
+
+.hidden {
+  @apply sr-only;
 }
 </style> 
