@@ -67,16 +67,19 @@
 
 ### Page "Panier"
 
-- [ ] Gestion du panier
-  * [ ] Ajout/Suppression d'articles
-  * [ ] Modification des quantités
-  * [ ] Calcul automatique du total
-- [ ] Processus de commande
-  * [ ] Formulaire de livraison
-  * [ ] Intégration du système de paiement
-  * [ ] Confirmation de commande
-- [ ] **Intégrations externes**
-  * [ ] Intégration d'un système de paiement (par exemple, Stripe, PayPal)
+- [x] Interface principale du panier
+  * [x] Liste des articles
+  * [x] Gestion des quantités
+  * [x] Calcul des totaux
+  * [x] Options de livraison
+- [x] Processus de commande
+  * [x] Étape livraison
+  * [x] Étape paiement
+  * [x] Confirmation de commande
+- [x] Responsive design
+  * [x] Version mobile
+  * [x] Version tablette
+  * [x] Version desktop
 
 ### Page "Mon compte"
 
