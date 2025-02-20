@@ -9,7 +9,7 @@ class Config
     public static function load(): void
     {
         self::$config['app'] = require __DIR__ . '/app.php';
-        self::$config['database'] = require __DIR__ . '/database.php';
+        self::$config['database'] = require __DIR__ . '/database.config.php';
     }
 
     public static function get(string $key, mixed $default = null): mixed
