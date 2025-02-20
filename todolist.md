@@ -8,7 +8,7 @@
   * [x] Installation des dépendances nécessaires
 - [ ] Création de la structure du projet
   * [x] Organisation des dossiers (MVC)
-  * [ ] Configuration du routeur
+  * [x] Configuration du routeur
   * [ ] Mise en place des fichiers de configuration
 - [ ] **Spécifications techniques**
   * [ ] Choix du framework backend (par exemple, Laravel, Symfony)

@@ -4,7 +4,6 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use Dotenv\Dotenv;
 use Bramus\Router\Router;
-use App\Controllers\HomeController;
 
 // Chargement des variables d'environnement
 $dotenv = Dotenv::createImmutable(__DIR__ . '/..');
@@ -23,11 +22,9 @@ if (!is_dir($twigCacheDir)) {
 // Initialisation du routeur
 $router = new Router();
 
-// Routes de base
-$router->get('/', function() {
-    $controller = new HomeController();
-    $controller->index();
-});
+// Chargement des routes
+$routes = require __DIR__ . '/../src/Config/routes.php';
+$routes($router);
 
 // Démarrage du routeur
 $router->run(); 

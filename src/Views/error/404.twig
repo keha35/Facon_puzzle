@@ -1,0 +1,53 @@
+{% extends "base.twig" %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block description %}{{ description }}{% endblock %}
+
+{% block content %}
+    <div class="error-page">
+        <h1>404</h1>
+        <h2>{{ title }}</h2>
+        <p>{{ description }}</p>
+        <div class="error-actions">
+            <a href="/" class="btn btn-primary">Retour à l'accueil</a>
+            <a href="/contact" class="btn btn-secondary">Nous contacter</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+<style>
+    .error-page {
+        text-align: center;
+        padding: 4rem 2rem;
+    }
+    
+    .error-page h1 {
+        font-size: 6rem;
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+    }
+    
+    .error-page h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .error-actions {
+        margin-top: 2rem;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    @media (max-width: 768px) {
+        .error-page h1 {
+            font-size: 4rem;
+        }
+        
+        .error-actions {
+            flex-direction: column;
+        }
+    }
+</style>
+{% endblock %} 
