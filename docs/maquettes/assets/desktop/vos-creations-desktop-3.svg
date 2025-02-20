@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Header -->
+  <rect width="1440" height="80" fill="#2C3E50"/>
+  <text x="40" y="50" fill="white" font-family="Montserrat" font-size="24" font-weight="bold">Façon Puzzle</text>
+
+  <!-- Fil d'Ariane -->
+  <g transform="translate(40, 100)">
+    <text fill="#64748B" font-family="Poppins" font-size="14">
+      <tspan x="0" y="0">Accueil</tspan>
+      <tspan x="60" y="0" fill="#94A3B8"> / </tspan>
+      <tspan x="80" y="0">Vos créations</tspan>
+      <tspan x="180" y="0" fill="#94A3B8"> / </tspan>
+      <tspan x="200" y="0" fill="#2C3E50" font-weight="600">Finalisation</tspan>
+    </text>
+  </g>
+
+  <!-- Indicateur d'étape -->
+  <g transform="translate(520, 140)">
+    <rect width="400" height="4" fill="#E2E8F0" rx="2"/>
+    <rect width="400" height="4" fill="#3498DB" rx="2"/>
+    <circle cx="400" cy="2" r="8" fill="#3498DB"/>
+    <text x="0" y="-20" fill="#2C3E50" font-family="Poppins" font-size="14" font-weight="600">Étape 3/3 : Finalisez votre commande</text>
+  </g>
+
+  <!-- Contenu principal -->
+  <g transform="translate(120, 180)">
+    <!-- Aperçu final -->
+    <g>
+      <rect width="800" height="500" rx="8" fill="white" filter="drop-shadow(0 4px 6px rgb(0 0 0 / 0.1))"/>
+      <!-- Image du puzzle -->
+      <rect x="20" y="20" width="760" height="460" rx="4" fill="#F8FAFC"/>
+      <!-- Grille de découpe -->
+      <path d="M20,20 H780 M20,100 H780 M20,180 H780" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4 4"/>
+    </g>
+
+    <!-- Récapitulatif -->
+    <g transform="translate(840, 0)">
+      <rect width="360" height="500" rx="8" fill="white" filter="drop-shadow(0 4px 6px rgb(0 0 0 / 0.1))"/>
+      
+      <!-- Titre -->
+      <text x="30" y="40" fill="#2C3E50" font-family="Poppins" font-size="18" font-weight="600">Récapitulatif</text>
+
+      <!-- Détails -->
+      <g transform="translate(30, 80)">
+        <text fill="#475569" font-family="Poppins" font-size="14">
+          <tspan x="0" y="0">Dimensions : 45 x 30 cm</tspan>
+          <tspan x="0" y="30">Nombre de pièces : 500</tspan>
+          <tspan x="0" y="60">Matériau : Premium (Bois)</tspan>
+        </text>
+      </g>
+
+      <!-- Prix -->
+      <g transform="translate(30, 200)">
+        <text fill="#2C3E50" font-family="Poppins" font-size="24" font-weight="600">
+          <tspan x="0" y="0">Total : 49,99 €</tspan>
+        </text>
+        <text x="0" y="30" fill="#64748B" font-family="Poppins" font-size="14">TVA incluse</text>
+      </g>
+
+      <!-- Boutons d'action -->
+      <g transform="translate(30, 280)">
+        <!-- Ajouter au panier -->
+        <g>
+          <path d="M0,0 H300 L290,10 V50 L300,60 H0 L10,50 V10 Z" fill="#3498DB"/>
+          <text x="150" y="35" fill="white" font-family="Poppins" font-size="16" text-anchor="middle" font-weight="600">
+            Ajouter au panier
+          </text>
+        </g>
+        <!-- Sauvegarder -->
+        <g transform="translate(0, 80)">
+          <path d="M0,0 H300 L290,10 V50 L300,60 H0 L10,50 V10 Z" fill="#E2E8F0"/>
+          <text x="150" y="35" fill="#475569" font-family="Poppins" font-size="16" text-anchor="middle" font-weight="600">
+            Sauvegarder le projet
+          </text>
+        </g>
+        <!-- Créer un autre -->
+        <g transform="translate(0, 160)">
+          <path d="M0,0 H300 L290,10 V50 L300,60 H0 L10,50 V10 Z" fill="#E74C3C"/>
+          <text x="150" y="35" fill="white" font-family="Poppins" font-size="16" text-anchor="middle" font-weight="600">
+            Créer un autre puzzle
+          </text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Navigation -->
+  <g transform="translate(40, 880)">
+    <g transform="translate(0, 0)">
+      <path d="M0,0 H120 L110,10 V40 L120,50 H0 L10,40 V10 Z" fill="#E74C3C"/>
+      <text x="60" y="30" fill="white" font-family="Poppins" font-size="16" text-anchor="middle" font-weight="600">Retour</text>
+    </g>
+  </g>
+</svg> 

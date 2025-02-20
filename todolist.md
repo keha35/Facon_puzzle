@@ -27,8 +27,8 @@
   * [x] Effets de hover
 - [x] Intégration des icônes panier/compte
 - [x] Animation de la pièce de puzzle décorative
-- [ ] **Détails de l'interface utilisateur**
-  * [ ] Création de maquettes pour chaque page
+- [x] **Détails de l'interface utilisateur**
+  * [x] Création de maquettes pour chaque page
   * [x] Définition de la charte graphique (couleurs, polices, etc.)
   * [x] Conception des composants réutilisables (boutons puzzle, etc.)
 

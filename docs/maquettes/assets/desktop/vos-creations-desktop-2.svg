@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Header -->
+  <rect width="1440" height="80" fill="#2C3E50"/>
+  <text x="40" y="50" fill="white" font-family="Montserrat" font-size="24" font-weight="bold">Façon Puzzle</text>
+
+  <!-- Fil d'Ariane -->
+  <g transform="translate(40, 100)">
+    <text fill="#64748B" font-family="Poppins" font-size="14">
+      <tspan x="0" y="0">Accueil</tspan>
+      <tspan x="60" y="0" fill="#94A3B8"> / </tspan>
+      <tspan x="80" y="0">Vos créations</tspan>
+      <tspan x="180" y="0" fill="#94A3B8"> / </tspan>
+      <tspan x="200" y="0" fill="#2C3E50" font-weight="600">Personnalisation</tspan>
+    </text>
+  </g>
+
+  <!-- Indicateur d'étape -->
+  <g transform="translate(520, 140)">
+    <rect width="400" height="4" fill="#E2E8F0" rx="2"/>
+    <rect width="266" height="4" fill="#3498DB" rx="2"/>
+    <circle cx="266" cy="2" r="8" fill="#3498DB"/>
+    <text x="0" y="-20" fill="#2C3E50" font-family="Poppins" font-size="14" font-weight="600">Étape 2/3 : Personnalisez votre puzzle</text>
+  </g>
+
+  <!-- Interface principale -->
+  <g transform="translate(40, 180)">
+    <!-- Panneau de contrôle -->
+    <g>
+      <rect width="360" height="680" rx="8" fill="white" filter="drop-shadow(0 4px 6px rgb(0 0 0 / 0.1))"/>
+      
+      <!-- Forme du puzzle -->
+      <g transform="translate(20, 20)">
+        <text fill="#2C3E50" font-family="Poppins" font-size="16" font-weight="600">Forme du puzzle</text>
+        <g transform="translate(0, 30)">
+          <rect width="320" height="100" rx="8" fill="#F8FAFC"/>
+          <!-- Options de forme -->
+          <g transform="translate(20, 20)">
+            <rect width="60" height="60" rx="4" fill="#3498DB"/>
+            <rect x="80" width="60" height="60" rx="30" fill="#E2E8F0"/>
+            <path d="M240,30 L270,0 L300,30 L270,60 Z" fill="#E2E8F0"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- Nombre de pièces -->
+      <g transform="translate(20, 160)">
+        <text fill="#2C3E50" font-family="Poppins" font-size="16" font-weight="600">Nombre de pièces</text>
+        <g transform="translate(0, 30)">
+          <rect width="320" height="100" rx="8" fill="#F8FAFC"/>
+          <!-- Slider -->
+          <g transform="translate(20, 40)">
+            <rect width="280" height="4" fill="#E2E8F0" rx="2"/>
+            <rect width="140" height="4" fill="#3498DB" rx="2"/>
+            <circle cx="140" cy="2" r="8" fill="#3498DB"/>
+            <text x="140" y="30" fill="#2C3E50" font-family="Poppins" font-size="14" text-anchor="middle">500 pièces</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Dimensions -->
+      <g transform="translate(20, 300)">
+        <text fill="#2C3E50" font-family="Poppins" font-size="16" font-weight="600">Dimensions</text>
+        <g transform="translate(0, 30)">
+          <rect width="320" height="150" rx="8" fill="#F8FAFC"/>
+          <!-- Options de taille -->
+          <g transform="translate(20, 20)">
+            <rect width="280" height="40" rx="4" fill="#3498DB"/>
+            <text x="140" y="25" fill="white" font-family="Poppins" font-size="14" text-anchor="middle" font-weight="600">45 x 30 cm</text>
+            <rect y="50" width="280" height="40" rx="4" fill="#E2E8F0"/>
+            <text x="140" y="75" fill="#475569" font-family="Poppins" font-size="14" text-anchor="middle">60 x 40 cm</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Matériaux -->
+      <g transform="translate(20, 490)">
+        <text fill="#2C3E50" font-family="Poppins" font-size="16" font-weight="600">Matériaux</text>
+        <g transform="translate(0, 30)">
+          <rect width="320" height="120" rx="8" fill="#F8FAFC"/>
+          <!-- Options de matériaux -->
+          <g transform="translate(20, 20)">
+            <rect width="280" height="80" rx="4" fill="#3498DB"/>
+            <text x="20" y="30" fill="white" font-family="Poppins" font-size="14" font-weight="600">Premium (Bois)</text>
+            <text x="20" y="55" fill="white" font-family="Poppins" font-size="14">+ 20,00 €</text>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- Vue 3D -->
+    <g transform="translate(400, 0)">
+      <rect width="960" height="680" rx="8" fill="#F8FAFC"/>
+      <!-- Barre d'outils -->
+      <g transform="translate(20, 20)">
+        <rect width="40" height="200" rx="20" fill="white" filter="drop-shadow(0 2px 4px rgb(0 0 0 / 0.1))"/>
+        <!-- Icônes d'outils -->
+        <g transform="translate(10, 10)">
+          <circle cx="10" cy="10" r="8" fill="#3498DB"/>
+          <circle cx="10" cy="40" r="8" fill="#E2E8F0"/>
+          <circle cx="10" cy="70" r="8" fill="#E2E8F0"/>
+        </g>
+      </g>
+      <!-- Zone de prévisualisation -->
+      <g transform="translate(80, 20)">
+        <rect width="860" height="640" rx="8" fill="white"/>
+        <!-- Grille de découpe -->
+        <path d="M0,0 H860 M0,80 H860 M0,160 H860" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4 4"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Navigation -->
+  <g transform="translate(40, 880)">
+    <g transform="translate(0, 0)">
+      <path d="M0,0 H120 L110,10 V40 L120,50 H0 L10,40 V10 Z" fill="#E74C3C"/>
+      <text x="60" y="30" fill="white" font-family="Poppins" font-size="16" text-anchor="middle" font-weight="600">Retour</text>
+    </g>
+    <g transform="translate(1280, 0)">
+      <path d="M0,0 H120 L110,10 V40 L120,50 H0 L10,40 V10 Z" fill="#3498DB"/>
+      <text x="60" y="30" fill="white" font-family="Poppins" font-size="16" text-anchor="middle" font-weight="600">Suivant</text>
+    </g>
+  </g>
+</svg> 
