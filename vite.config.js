@@ -5,7 +5,7 @@ import { resolve } from 'path';
 export default defineConfig({
   plugins: [vue()],
   root: './resources',
-  base: '/assets/',
+  base: '/Facon_puzzle-new/assets/',
   build: {
     outDir: '../public/assets',
     assetsDir: '',
@@ -30,7 +30,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'http://localhost:80',
+        target: 'http://localhost/Facon_puzzle-new',
         changeOrigin: true
       }
     }

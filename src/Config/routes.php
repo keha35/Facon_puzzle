@@ -1,10 +1,16 @@
 <?php
 
+use App\Config\Config;
+
 /**
  * Configuration des routes de l'application
  * @param \Bramus\Router\Router $router
  */
 return function(\Bramus\Router\Router $router) {
+    // Définition du chemin de base
+    $basePath = Config::get('app.base_path', '/Facon_puzzle-new');
+    $router->setBasePath($basePath);
+
     // Page d'accueil
     $router->get('/', 'App\Controllers\HomeController@index');
     
