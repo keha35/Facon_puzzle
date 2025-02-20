@@ -1,0 +1,350 @@
+{% extends "admin/layout.twig" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="dashboard">
+    <!-- Cartes de statistiques -->
+    <div class="stats-grid">
+        <!-- Ventes -->
+        <div class="stats-card">
+            <div class="stats-header">
+                <h3>Ventes</h3>
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="stats-content">
+                <div class="stat-item">
+                    <span class="label">Aujourd'hui</span>
+                    <span class="value">{{ stats.sales.daily }}€</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Cette semaine</span>
+                    <span class="value">{{ stats.sales.weekly }}€</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Ce mois</span>
+                    <span class="value">{{ stats.sales.monthly }}€</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Commandes -->
+        <div class="stats-card">
+            <div class="stats-header">
+                <h3>Commandes</h3>
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div class="stats-content">
+                <div class="stat-item">
+                    <span class="label">En attente</span>
+                    <span class="value">{{ stats.orders.pending }}</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">En traitement</span>
+                    <span class="value">{{ stats.orders.processing }}</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Expédiées</span>
+                    <span class="value">{{ stats.orders.shipped }}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stock -->
+        <div class="stats-card">
+            <div class="stats-header">
+                <h3>Inventaire</h3>
+                <i class="fas fa-box"></i>
+            </div>
+            <div class="stats-content">
+                <div class="stat-item">
+                    <span class="label">Stock faible</span>
+                    <span class="value warning">{{ stats.inventory.low_stock }}</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Rupture</span>
+                    <span class="value danger">{{ stats.inventory.out_of_stock }}</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Total produits</span>
+                    <span class="value">{{ stats.inventory.total_products }}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Utilisateurs -->
+        <div class="stats-card">
+            <div class="stats-header">
+                <h3>Utilisateurs</h3>
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="stats-content">
+                <div class="stat-item">
+                    <span class="label">Total</span>
+                    <span class="value">{{ stats.users.total }}</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Nouveaux aujourd'hui</span>
+                    <span class="value success">{{ stats.users.new_today }}</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Actifs</span>
+                    <span class="value">{{ stats.users.active }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Graphiques -->
+    <div class="charts-grid">
+        <div class="chart-card">
+            <h3>Évolution des ventes</h3>
+            <canvas id="salesChart"></canvas>
+        </div>
+        <div class="chart-card">
+            <h3>Commandes par statut</h3>
+            <canvas id="ordersChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Dernières commandes -->
+    <div class="recent-orders">
+        <div class="card-header">
+            <h3>Dernières commandes</h3>
+            <a href="{{ path('admin_orders') }}" class="btn btn-primary">Voir tout</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Client</th>
+                        <th>Date</th>
+                        <th>Montant</th>
+                        <th>Statut</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in recentOrders %}
+                    <tr>
+                        <td>#{{ order.id }}</td>
+                        <td>{{ order.customer_name }}</td>
+                        <td>{{ order.created_at|date('d/m/Y H:i') }}</td>
+                        <td>{{ order.total }}€</td>
+                        <td>
+                            <span class="status-badge status-{{ order.status }}">
+                                {{ order.status|trans }}
+                            </span>
+                        </td>
+                        <td>
+                            <a href="{{ path('admin_order_view', {id: order.id}) }}" class="btn btn-sm btn-info">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block stylesheets %}
+<style>
+.dashboard {
+    padding: 1.5rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stats-card {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stats-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.stats-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2C3E50;
+}
+
+.stats-header i {
+    font-size: 1.5rem;
+    color: #3498DB;
+}
+
+.stats-content {
+    display: grid;
+    gap: 1rem;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-item .label {
+    color: #64748B;
+}
+
+.stat-item .value {
+    font-weight: 600;
+    color: #2C3E50;
+}
+
+.value.warning {
+    color: #F1C40F;
+}
+
+.value.danger {
+    color: #E74C3C;
+}
+
+.value.success {
+    color: #2ECC71;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.chart-card {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.chart-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2C3E50;
+    margin-bottom: 1rem;
+}
+
+.recent-orders {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.card-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2C3E50;
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-pending {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.status-processing {
+    background: #DBEAFE;
+    color: #1E40AF;
+}
+
+.status-shipped {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+{% endblock %}
+
+{% block javascripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Chargement des données pour les graphiques
+    fetch('{{ path('admin_dashboard_charts') }}')
+        .then(response => response.json())
+        .then(data => {
+            initSalesChart(data.sales);
+            initOrdersChart(data.orders);
+        });
+});
+
+function initSalesChart(data) {
+    const ctx = document.getElementById('salesChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: data.labels,
+            datasets: [{
+                label: 'Ventes',
+                data: data.values,
+                borderColor: '#3498DB',
+                tension: 0.4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+}
+
+function initOrdersChart(data) {
+    const ctx = document.getElementById('ordersChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: data.labels,
+            datasets: [{
+                data: data.values,
+                backgroundColor: ['#F1C40F', '#3498DB', '#2ECC71']
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+}
+</script>
+{% endblock %} 

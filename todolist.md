@@ -124,10 +124,10 @@
 
 ### Interface d'administration
 
-- [ ] Dashboard
-  * [ ] Statistiques des ventes
-  * [ ] Suivi des commandes
-  * [ ] Gestion des stocks
+- [x] Dashboard
+  * [x] Statistiques des ventes
+  * [x] Suivi des commandes
+  * [x] Gestion des stocks
 - [ ] Gestion des produits
   * [ ] Ajout/modification/suppression
   * [ ] Gestion des catégories
@@ -205,3 +205,56 @@
 - [ ] **Analytics et suivi des performances**
   * [ ] Intégration d'un outil d'analyse (par exemple, Google Analytics)
   * [ ] Mise en place de KPIs pour suivre les performances du site
+
+## 7. Marketing et Communication
+
+- [ ] Stratégie marketing digitale
+  * [ ] Définition des personas
+  * [ ] Plan de communication
+  * [ ] Calendrier éditorial
+- [ ] SEO
+  * [ ] Audit technique
+  * [ ] Optimisation du contenu
+  * [ ] Stratégie de backlinks
+- [ ] Réseaux sociaux
+  * [ ] Création des comptes professionnels
+  * [ ] Stratégie de contenu
+  * [ ] Planification des publications
+- [ ] Email marketing
+  * [ ] Configuration des newsletters
+  * [ ] Templates d'emails
+  * [ ] Automatisation des campagnes
+
+## 8. Support et Maintenance
+
+- [ ] Support client
+  * [ ] Mise en place d'un système de tickets
+  * [ ] FAQ dynamique
+  * [ ] Chat en direct
+- [ ] Maintenance technique
+  * [ ] Sauvegardes automatiques
+  * [ ] Mises à jour de sécurité
+  * [ ] Monitoring des performances
+- [ ] Amélioration continue
+  * [ ] Analyse des retours utilisateurs
+  * [ ] Optimisation des conversions
+  * [ ] A/B testing
+- [ ] Formation
+  * [ ] Formation de l'équipe support
+  * [ ] Documentation des procédures
+  * [ ] Guides de maintenance
+
+## 9. Évolutions futures
+
+- [ ] Nouvelles fonctionnalités
+  * [ ] Système de points fidélité
+  * [ ] Programme d'affiliation
+  * [ ] Application mobile
+- [ ] Intégrations supplémentaires
+  * [ ] Nouveaux moyens de paiement
+  * [ ] Marketplaces
+  * [ ] Réseaux sociaux
+- [ ] Expansion internationale
+  * [ ] Traduction du site
+  * [ ] Adaptation aux marchés locaux
+  * [ ] Logistique internationale
