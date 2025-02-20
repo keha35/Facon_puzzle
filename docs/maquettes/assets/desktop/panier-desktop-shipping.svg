@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1440" height="1000" viewBox="0 0 1440 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Header -->
+  <rect width="1440" height="80" fill="#2C3E50"/>
+  <text x="40" y="50" fill="white" font-family="Montserrat" font-size="24" font-weight="bold">Façon Puzzle</text>
+
+  <!-- Fil d'Ariane -->
+  <g transform="translate(40, 100)">
+    <text fill="#64748B" font-family="Poppins" font-size="14">
+      <tspan x="0" y="0">Accueil</tspan>
+      <tspan x="60" y="0" fill="#94A3B8"> / </tspan>
+      <tspan x="80" y="0">Panier</tspan>
+      <tspan x="140" y="0" fill="#94A3B8"> / </tspan>
+      <tspan x="160" y="0" fill="#2C3E50" font-weight="600">Livraison</tspan>
+    </text>
+  </g>
+
+  <!-- Barre de progression -->
+  <g transform="translate(320, 140)">
+    <rect width="800" height="4" fill="#E2E8F0" rx="2"/>
+    <rect width="400" height="4" fill="#3498DB" rx="2"/>
+    <g transform="translate(0, -30)">
+      <circle cx="0" cy="30" r="16" fill="#3498DB"/>
+      <text x="0" y="35" fill="white" font-family="Poppins" font-size="14" text-anchor="middle">1</text>
+      <text x="0" y="60" fill="#3498DB" font-family="Poppins" font-size="14" text-anchor="middle">Panier</text>
+    </g>
+    <g transform="translate(400, -30)">
+      <circle cx="0" cy="30" r="16" fill="#3498DB"/>
+      <text x="0" y="35" fill="white" font-family="Poppins" font-size="14" text-anchor="middle">2</text>
+      <text x="0" y="60" fill="#3498DB" font-family="Poppins" font-size="14" text-anchor="middle">Livraison</text>
+    </g>
+    <g transform="translate(800, -30)">
+      <circle cx="0" cy="30" r="16" fill="#E2E8F0"/>
+      <text x="0" y="35" fill="#64748B" font-family="Poppins" font-size="14" text-anchor="middle">3</text>
+      <text x="0" y="60" fill="#64748B" font-family="Poppins" font-size="14" text-anchor="middle">Paiement</text>
+    </g>
+  </g>
+
+  <!-- Contenu principal -->
+  <g transform="translate(40, 240)">
+    <!-- Formulaire de livraison -->
+    <g>
+      <rect width="800" height="600" rx="8" fill="white" filter="drop-shadow(0 4px 6px rgb(0 0 0 / 0.1))"/>
+      
+      <!-- Titre -->
+      <text x="40" y="40" fill="#2C3E50" font-family="Poppins" font-size="18" font-weight="600">Adresse de livraison</text>
+
+      <!-- Formulaire -->
+      <g transform="translate(40, 80)">
+        <!-- Nom et Prénom -->
+        <g>
+          <text fill="#475569" font-family="Poppins" font-size="14">Nom et Prénom</text>
+          <rect y="20" width="720" height="40" rx="4" fill="#F8FAFC"/>
+        </g>
+
+        <!-- Adresse -->
+        <g transform="translate(0, 80)">
+          <text fill="#475569" font-family="Poppins" font-size="14">Adresse</text>
+          <rect y="20" width="720" height="40" rx="4" fill="#F8FAFC"/>
+        </g>
+
+        <!-- Complément d'adresse -->
+        <g transform="translate(0, 160)">
+          <text fill="#475569" font-family="Poppins" font-size="14">Complément d'adresse (optionnel)</text>
+          <rect y="20" width="720" height="40" rx="4" fill="#F8FAFC"/>
+        </g>
+
+        <!-- Ville et Code postal -->
+        <g transform="translate(0, 240)">
+          <g>
+            <text fill="#475569" font-family="Poppins" font-size="14">Ville</text>
+            <rect y="20" width="460" height="40" rx="4" fill="#F8FAFC"/>
+          </g>
+          <g transform="translate(480, 0)">
+            <text fill="#475569" font-family="Poppins" font-size="14">Code postal</text>
+            <rect y="20" width="240" height="40" rx="4" fill="#F8FAFC"/>
+          </g>
+        </g>
+
+        <!-- Mode de livraison -->
+        <g transform="translate(0, 320)">
+          <text fill="#2C3E50" font-family="Poppins" font-size="16" font-weight="600">Mode de livraison</text>
+          
+          <!-- Standard -->
+          <g transform="translate(0, 40)">
+            <rect width="720" height="60" rx="4" fill="#3498DB"/>
+            <circle cx="30" cy="30" r="10" fill="white"/>
+            <circle cx="30" cy="30" r="4" fill="#3498DB"/>
+            <text x="60" y="25" fill="white" font-family="Poppins" font-size="14" font-weight="600">Livraison Standard</text>
+            <text x="60" y="45" fill="white" font-family="Poppins" font-size="14">3-5 jours ouvrés</text>
+            <text x="680" y="35" fill="white" font-family="Poppins" font-size="14" text-anchor="end">9,99 €</text>
+          </g>
+
+          <!-- Express -->
+          <g transform="translate(0, 110)">
+            <rect width="720" height="60" rx="4" fill="#F8FAFC"/>
+            <circle cx="30" cy="30" r="10" fill="#E2E8F0"/>
+            <text x="60" y="25" fill="#475569" font-family="Poppins" font-size="14" font-weight="600">Livraison Express</text>
+            <text x="60" y="45" fill="#475569" font-family="Poppins" font-size="14">1-2 jours ouvrés</text>
+            <text x="680" y="35" fill="#475569" font-family="Poppins" font-size="14" text-anchor="end">14,99 €</text>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- Résumé de la commande -->
+    <g transform="translate(840, 0)">
+      <rect width="360" height="600" rx="8" fill="white" filter="drop-shadow(0 4px 6px rgb(0 0 0 / 0.1))"/>
+      
+      <!-- Titre -->
+      <text x="20" y="40" fill="#2C3E50" font-family="Poppins" font-size="18" font-weight="600">Résumé de la commande</text>
+
+      <!-- Articles -->
+      <g transform="translate(20, 80)">
+        <text fill="#475569" font-family="Poppins" font-size="14">
+          <tspan x="0" y="0">3 articles</tspan>
+          <tspan x="320" y="0" text-anchor="end">174,96 €</tspan>
+        </text>
+      </g>
+
+      <!-- Livraison -->
+      <g transform="translate(20, 120)">
+        <text fill="#475569" font-family="Poppins" font-size="14">
+          <tspan x="0" y="0">Livraison Standard</tspan>
+          <tspan x="320" y="0" text-anchor="end">9,99 €</tspan>
+        </text>
+      </g>
+
+      <!-- TVA -->
+      <g transform="translate(20, 160)">
+        <text fill="#475569" font-family="Poppins" font-size="14">
+          <tspan x="0" y="0">TVA (20%)</tspan>
+          <tspan x="320" y="0" text-anchor="end">34,99 €</tspan>
+        </text>
+      </g>
+
+      <!-- Total -->
+      <g transform="translate(20, 200)">
+        <line x1="0" y1="0" x2="320" y2="0" stroke="#E2E8F0" stroke-width="1"/>
+        <text fill="#2C3E50" font-family="Poppins" font-size="18" font-weight="600">
+          <tspan x="0" y="40">Total</tspan>
+          <tspan x="320" y="40" text-anchor="end">219,94 €</tspan>
+        </text>
+      </g>
+
+      <!-- Navigation -->
+      <g transform="translate(20, 500)">
+        <path d="M0,0 H320 L310,5 V55 L320,60 H0 L10,55 V5 Z" fill="#3498DB"/>
+        <text x="160" y="35" fill="white" font-family="Poppins" font-size="16" text-anchor="middle" font-weight="600">
+          Continuer vers le paiement
+        </text>
+      </g>
+    </g>
+  </g>
+</svg> 
