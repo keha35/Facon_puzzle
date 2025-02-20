@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
+use App\Config\Config;
 
 abstract class BaseController
 {
@@ -16,6 +17,14 @@ abstract class BaseController
             'cache' => __DIR__ . '/../../var/cache/twig',
             'debug' => $_ENV['APP_DEBUG'] === 'true',
             'auto_reload' => true
+        ]);
+
+        // Ajout des variables globales
+        $this->twig->addGlobal('app', [
+            'name' => Config::get('app.name'),
+            'env' => Config::get('app.env'),
+            'debug' => Config::get('app.debug'),
+            'base_path' => Config::get('app.base_path')
         ]);
     }
 

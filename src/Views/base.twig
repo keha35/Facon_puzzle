@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Façon Puzzle{% endblock %}</title>
     <meta name="description" content="{% block description %}Créez vos puzzles personnalisés uniques{% endblock %}">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="{{ app.base_path }}/assets/css/style.css">
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="/">Accueil</a></li>
-                <li><a href="/creations">Vos Créations</a></li>
-                <li><a href="/catalogue">Notre Catalogue</a></li>
-                <li><a href="/panier">Panier</a></li>
-                <li><a href="/compte">Mon Compte</a></li>
+                <li><a href="{{ app.base_path }}/">Accueil</a></li>
+                <li><a href="{{ app.base_path }}/creations">Vos Créations</a></li>
+                <li><a href="{{ app.base_path }}/catalogue">Notre Catalogue</a></li>
+                <li><a href="{{ app.base_path }}/panier">Panier</a></li>
+                <li><a href="{{ app.base_path }}/compte">Mon Compte</a></li>
             </ul>
         </nav>
     </header>
@@ -34,9 +34,9 @@
             <div class="footer-section">
                 <h3>Liens utiles</h3>
                 <ul>
-                    <li><a href="/mentions-legales">Mentions légales</a></li>
-                    <li><a href="/cgv">CGV</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="{{ app.base_path }}/mentions-legales">Mentions légales</a></li>
+                    <li><a href="{{ app.base_path }}/cgv">CGV</a></li>
+                    <li><a href="{{ app.base_path }}/contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -45,7 +45,7 @@
         </div>
     </footer>
 
-    <script src="/assets/js/app.js"></script>
+    <script src="{{ app.base_path }}/assets/js/app.js"></script>
     {% block javascripts %}{% endblock %}
 </body>
 </html> 
