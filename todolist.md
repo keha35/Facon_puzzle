@@ -25,12 +25,12 @@
 - [x] Implémentation des boutons style puzzle
   * [x] Animation CSS des pièces
   * [x] Effets de hover
-- [ ] Intégration des icônes panier/compte
-- [ ] Animation de la pièce de puzzle décorative
+- [x] Intégration des icônes panier/compte
+- [x] Animation de la pièce de puzzle décorative
 - [ ] **Détails de l'interface utilisateur**
   * [ ] Création de maquettes pour chaque page
-  * [ ] Définition de la charte graphique (couleurs, polices, etc.)
-  * [ ] Conception des composants réutilisables (boutons puzzle, etc.)
+  * [x] Définition de la charte graphique (couleurs, polices, etc.)
+  * [x] Conception des composants réutilisables (boutons puzzle, etc.)
 
 ### Page "Vos créations"
 
