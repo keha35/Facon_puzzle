@@ -8,7 +8,7 @@ use App\Config\Config;
  */
 return function(\Bramus\Router\Router $router) {
     // Définition du chemin de base
-    $basePath = Config::get('app.base_path', '/Facon_puzzle-new');
+    $basePath = Config::get('app.base_path', '/Facon_puzzle-new/public');
     $router->setBasePath($basePath);
 
     // Page d'accueil
@@ -38,6 +38,15 @@ return function(\Bramus\Router\Router $router) {
     // Routes pour le compte utilisateur
     $router->mount('/compte', function() use ($router) {
         $router->get('/', 'App\Controllers\AccountController@index');
+        $router->get('/commandes', 'App\Controllers\AccountController@orders');
+        $router->get('/creations', 'App\Controllers\AccountController@creations');
+        $router->get('/adresses', 'App\Controllers\AccountController@addresses');
+        $router->get('/parametres', 'App\Controllers\AccountController@settings');
+        $router->post('/avatar', 'App\Controllers\AccountController@updateAvatar');
+    });
+    
+    // Routes pour l'authentification
+    $router->mount('/auth', function() use ($router) {
         $router->get('/connexion', 'App\Controllers\AuthController@loginForm');
         $router->post('/connexion', 'App\Controllers\AuthController@login');
         $router->get('/inscription', 'App\Controllers\AuthController@registerForm');

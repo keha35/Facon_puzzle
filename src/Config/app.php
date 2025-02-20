@@ -4,8 +4,8 @@ return [
     // Configuration générale de l'application
     'name' => 'Façon Puzzle',
     'url' => $_ENV['APP_URL'] ?? 'http://localhost/Facon_puzzle-new',
-    'base_path' => $_ENV['APP_BASE_PATH'] ?? '/Facon_puzzle-new',
-    'env' => $_ENV['APP_ENV'] ?? 'production',
+    'base_path' => $_ENV['APP_BASE_PATH'] ?? '/Facon_puzzle-new/public',
+    'env' => $_ENV['APP_ENV'] ?? 'development',
     'debug' => $_ENV['APP_DEBUG'] === 'true',
     'timezone' => 'Europe/Paris',
     'locale' => 'fr',
