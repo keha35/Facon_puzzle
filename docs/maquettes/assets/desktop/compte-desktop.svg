@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1440" height="1000" viewBox="0 0 1440 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Header -->
+  <rect width="1440" height="80" fill="#2C3E50"/>
+  <text x="40" y="50" fill="white" font-family="Montserrat" font-size="24" font-weight="bold">Façon Puzzle</text>
+
+  <!-- Fil d'Ariane -->
+  <g transform="translate(40, 100)">
+    <text fill="#64748B" font-family="Poppins" font-size="14">
+      <tspan x="0" y="0">Accueil</tspan>
+      <tspan x="60" y="0" fill="#94A3B8"> / </tspan>
+      <tspan x="80" y="0" fill="#2C3E50" font-weight="600">Mon compte</tspan>
+    </text>
+  </g>
+
+  <!-- Contenu principal -->
+  <g transform="translate(40, 160)">
+    <!-- Menu latéral -->
+    <g>
+      <rect width="280" height="600" rx="8" fill="white" filter="drop-shadow(0 4px 6px rgb(0 0 0 / 0.1))"/>
+      
+      <!-- Photo de profil -->
+      <g transform="translate(90, 40)">
+        <circle r="50" fill="#F8FAFC"/>
+        <text x="0" y="80" fill="#475569" font-family="Poppins" font-size="14" text-anchor="middle">Jean Dupont</text>
+      </g>
+
+      <!-- Navigation -->
+      <g transform="translate(20, 160)">
+        <!-- Tableau de bord -->
+        <g>
+          <rect width="240" height="50" rx="4" fill="#3498DB"/>
+          <text x="20" y="30" fill="white" font-family="Poppins" font-size="14" font-weight="600">Tableau de bord</text>
+        </g>
+
+        <!-- Commandes -->
+        <g transform="translate(0, 60)">
+          <rect width="240" height="50" rx="4" fill="#F8FAFC"/>
+          <text x="20" y="30" fill="#475569" font-family="Poppins" font-size="14">Mes commandes</text>
+        </g>
+
+        <!-- Créations -->
+        <g transform="translate(0, 120)">
+          <rect width="240" height="50" rx="4" fill="#F8FAFC"/>
+          <text x="20" y="30" fill="#475569" font-family="Poppins" font-size="14">Mes créations</text>
+        </g>
+
+        <!-- Adresses -->
+        <g transform="translate(0, 180)">
+          <rect width="240" height="50" rx="4" fill="#F8FAFC"/>
+          <text x="20" y="30" fill="#475569" font-family="Poppins" font-size="14">Mes adresses</text>
+        </g>
+
+        <!-- Paramètres -->
+        <g transform="translate(0, 240)">
+          <rect width="240" height="50" rx="4" fill="#F8FAFC"/>
+          <text x="20" y="30" fill="#475569" font-family="Poppins" font-size="14">Paramètres du compte</text>
+        </g>
+
+        <!-- Déconnexion -->
+        <g transform="translate(0, 340)">
+          <rect width="240" height="50" rx="4" fill="#E74C3C"/>
+          <text x="20" y="30" fill="white" font-family="Poppins" font-size="14">Déconnexion</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Contenu principal -->
+    <g transform="translate(320, 0)">
+      <rect width="1040" height="600" rx="8" fill="white" filter="drop-shadow(0 4px 6px rgb(0 0 0 / 0.1))"/>
+      
+      <!-- Titre -->
+      <text x="40" y="40" fill="#2C3E50" font-family="Poppins" font-size="24" font-weight="600">Tableau de bord</text>
+
+      <!-- Statistiques -->
+      <g transform="translate(40, 80)">
+        <!-- Commandes -->
+        <g>
+          <rect width="300" height="120" rx="8" fill="#F8FAFC"/>
+          <text x="20" y="30" fill="#475569" font-family="Poppins" font-size="14">Commandes en cours</text>
+          <text x="20" y="70" fill="#2C3E50" font-family="Poppins" font-size="24" font-weight="600">2</text>
+        </g>
+
+        <!-- Créations -->
+        <g transform="translate(320, 0)">
+          <rect width="300" height="120" rx="8" fill="#F8FAFC"/>
+          <text x="20" y="30" fill="#475569" font-family="Poppins" font-size="14">Créations sauvegardées</text>
+          <text x="20" y="70" fill="#2C3E50" font-family="Poppins" font-size="24" font-weight="600">5</text>
+        </g>
+
+        <!-- Points fidélité -->
+        <g transform="translate(640, 0)">
+          <rect width="300" height="120" rx="8" fill="#F8FAFC"/>
+          <text x="20" y="30" fill="#475569" font-family="Poppins" font-size="14">Points fidélité</text>
+          <text x="20" y="70" fill="#2C3E50" font-family="Poppins" font-size="24" font-weight="600">150</text>
+        </g>
+      </g>
+
+      <!-- Dernières commandes -->
+      <g transform="translate(40, 240)">
+        <text fill="#2C3E50" font-family="Poppins" font-size="18" font-weight="600">Dernières commandes</text>
+        
+        <!-- Tableau -->
+        <g transform="translate(0, 40)">
+          <!-- En-tête -->
+          <g>
+            <text fill="#64748B" font-family="Poppins" font-size="14">
+              <tspan x="0" y="0">N° Commande</tspan>
+              <tspan x="200" y="0">Date</tspan>
+              <tspan x="400" y="0">Statut</tspan>
+              <tspan x="600" y="0">Total</tspan>
+            </text>
+            <line x1="0" y1="20" x2="960" y2="20" stroke="#E2E8F0" stroke-width="1"/>
+          </g>
+
+          <!-- Commande 1 -->
+          <g transform="translate(0, 40)">
+            <text fill="#2C3E50" font-family="Poppins" font-size="14">#CMD001234</text>
+            <text x="200" y="0" fill="#475569" font-family="Poppins" font-size="14">15/03/2024</text>
+            <rect x="400" width="100" height="24" rx="12" fill="#3498DB" fill-opacity="0.1"/>
+            <text x="450" y="16" fill="#3498DB" font-family="Poppins" font-size="12" text-anchor="middle">En cours</text>
+            <text x="600" y="0" fill="#2C3E50" font-family="Poppins" font-size="14">89,98 €</text>
+          </g>
+
+          <!-- Commande 2 -->
+          <g transform="translate(0, 80)">
+            <text fill="#2C3E50" font-family="Poppins" font-size="14">#CMD001233</text>
+            <text x="200" y="0" fill="#475569" font-family="Poppins" font-size="14">10/03/2024</text>
+            <rect x="400" width="100" height="24" rx="12" fill="#10B981" fill-opacity="0.1"/>
+            <text x="450" y="16" fill="#10B981" font-family="Poppins" font-size="12" text-anchor="middle">Livré</text>
+            <text x="600" y="0" fill="#2C3E50" font-family="Poppins" font-size="14">129,97 €</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Dernières créations -->
+      <g transform="translate(40, 400)">
+        <text fill="#2C3E50" font-family="Poppins" font-size="18" font-weight="600">Dernières créations</text>
+        
+        <!-- Grille -->
+        <g transform="translate(0, 40)">
+          <!-- Création 1 -->
+          <g>
+            <rect width="220" height="120" rx="8" fill="#F8FAFC"/>
+            <text x="20" y="140" fill="#2C3E50" font-family="Poppins" font-size="14">Puzzle Nature</text>
+            <text x="20" y="160" fill="#475569" font-family="Poppins" font-size="12">Créé le 12/03/2024</text>
+          </g>
+
+          <!-- Création 2 -->
+          <g transform="translate(240, 0)">
+            <rect width="220" height="120" rx="8" fill="#F8FAFC"/>
+            <text x="20" y="140" fill="#2C3E50" font-family="Poppins" font-size="14">Puzzle Famille</text>
+            <text x="20" y="160" fill="#475569" font-family="Poppins" font-size="12">Créé le 08/03/2024</text>
+          </g>
+
+          <!-- Création 3 -->
+          <g transform="translate(480, 0)">
+            <rect width="220" height="120" rx="8" fill="#F8FAFC"/>
+            <text x="20" y="140" fill="#2C3E50" font-family="Poppins" font-size="14">Puzzle Voyage</text>
+            <text x="20" y="160" fill="#475569" font-family="Poppins" font-size="12">Créé le 05/03/2024</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg> 

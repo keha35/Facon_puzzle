@@ -83,18 +83,16 @@
 
 ### Page "Mon compte"
 
-- [ ] Système d'authentification
-  * [ ] Inscription/Connexion
-  * [ ] Récupération de mot de passe
-- [ ] Fonctionnalités utilisateur
-  * [ ] Programme de fidélité
-  * [ ] Système de parrainage
-  * [ ] Suivi de commandes
-  * [ ] Liste de souhaits
-- [ ] Système de commentaires
-  * [ ] Ajout/Modification
-  * [ ] Notation des produits
-- [ ] Développement du système d'objets cachés à collectionner sur le site
+- [x] Interface utilisateur
+  - [x] Tableau de bord
+  - [x] Gestion des commandes
+  - [x] Gestion des créations
+  - [x] Paramètres du compte
+- [x] Fonctionnalités
+  - [x] Modification du profil
+  - [x] Gestion des adresses
+  - [x] Sécurité du compte
+  - [x] Préférences utilisateur
 
 ## 3. Développement Backend
 

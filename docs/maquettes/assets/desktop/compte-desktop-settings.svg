@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1440" height="1000" viewBox="0 0 1440 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Header -->
+  <rect width="1440" height="80" fill="#2C3E50"/>
+  <text x="40" y="50" fill="white" font-family="Montserrat" font-size="24" font-weight="bold">Façon Puzzle</text>
+
+  <!-- Fil d'Ariane -->
+  <g transform="translate(40, 100)">
+    <text fill="#64748B" font-family="Poppins" font-size="14">
+      <tspan x="0" y="0">Accueil</tspan>
+      <tspan x="60" y="0" fill="#94A3B8"> / </tspan>
+      <tspan x="80" y="0">Mon compte</tspan>
+      <tspan x="180" y="0" fill="#94A3B8"> / </tspan>
+      <tspan x="200" y="0" fill="#2C3E50" font-weight="600">Paramètres</tspan>
+    </text>
+  </g>
+
+  <!-- Contenu principal -->
+  <g transform="translate(40, 160)">
+    <!-- Menu latéral -->
+    <g>
+      <rect width="280" height="600" rx="8" fill="white" filter="drop-shadow(0 4px 6px rgb(0 0 0 / 0.1))"/>
+      
+      <!-- Photo de profil -->
+      <g transform="translate(90, 40)">
+        <circle r="50" fill="#F8FAFC"/>
+        <text x="0" y="80" fill="#475569" font-family="Poppins" font-size="14" text-anchor="middle">Jean Dupont</text>
+      </g>
+
+      <!-- Navigation -->
+      <g transform="translate(20, 160)">
+        <!-- Tableau de bord -->
+        <g>
+          <rect width="240" height="50" rx="4" fill="#F8FAFC"/>
+          <text x="20" y="30" fill="#475569" font-family="Poppins" font-size="14">Tableau de bord</text>
+        </g>
+
+        <!-- Commandes -->
+        <g transform="translate(0, 60)">
+          <rect width="240" height="50" rx="4" fill="#F8FAFC"/>
+          <text x="20" y="30" fill="#475569" font-family="Poppins" font-size="14">Mes commandes</text>
+        </g>
+
+        <!-- Créations -->
+        <g transform="translate(0, 120)">
+          <rect width="240" height="50" rx="4" fill="#F8FAFC"/>
+          <text x="20" y="30" fill="#475569" font-family="Poppins" font-size="14">Mes créations</text>
+        </g>
+
+        <!-- Adresses -->
+        <g transform="translate(0, 180)">
+          <rect width="240" height="50" rx="4" fill="#F8FAFC"/>
+          <text x="20" y="30" fill="#475569" font-family="Poppins" font-size="14">Mes adresses</text>
+        </g>
+
+        <!-- Paramètres -->
+        <g transform="translate(0, 240)">
+          <rect width="240" height="50" rx="4" fill="#3498DB"/>
+          <text x="20" y="30" fill="white" font-family="Poppins" font-size="14" font-weight="600">Paramètres du compte</text>
+        </g>
+
+        <!-- Déconnexion -->
+        <g transform="translate(0, 340)">
+          <rect width="240" height="50" rx="4" fill="#E74C3C"/>
+          <text x="20" y="30" fill="white" font-family="Poppins" font-size="14">Déconnexion</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Contenu principal -->
+    <g transform="translate(320, 0)">
+      <rect width="1040" height="800" rx="8" fill="white" filter="drop-shadow(0 4px 6px rgb(0 0 0 / 0.1))"/>
+      
+      <!-- Titre -->
+      <text x="40" y="40" fill="#2C3E50" font-family="Poppins" font-size="24" font-weight="600">Paramètres du compte</text>
+
+      <!-- Informations personnelles -->
+      <g transform="translate(40, 80)">
+        <text fill="#2C3E50" font-family="Poppins" font-size="18" font-weight="600">Informations personnelles</text>
+        
+        <!-- Formulaire -->
+        <g transform="translate(0, 40)">
+          <!-- Photo de profil -->
+          <g>
+            <text fill="#475569" font-family="Poppins" font-size="14">Photo de profil</text>
+            <g transform="translate(0, 20)">
+              <circle r="40" fill="#F8FAFC"/>
+              <rect x="100" width="200" height="40" rx="4" fill="#3498DB"/>
+              <text x="200" y="25" fill="white" font-family="Poppins" font-size="14" text-anchor="middle">Modifier la photo</text>
+            </g>
+          </g>
+
+          <!-- Nom et Prénom -->
+          <g transform="translate(0, 100)">
+            <text fill="#475569" font-family="Poppins" font-size="14">Nom et Prénom</text>
+            <rect y="20" width="460" height="40" rx="4" fill="#F8FAFC"/>
+            <text x="20" y="45" fill="#2C3E50" font-family="Poppins" font-size="14">Jean Dupont</text>
+          </g>
+
+          <!-- Email -->
+          <g transform="translate(0, 180)">
+            <text fill="#475569" font-family="Poppins" font-size="14">Adresse email</text>
+            <rect y="20" width="460" height="40" rx="4" fill="#F8FAFC"/>
+            <text x="20" y="45" fill="#2C3E50" font-family="Poppins" font-size="14">jean.dupont@email.com</text>
+          </g>
+
+          <!-- Téléphone -->
+          <g transform="translate(0, 260)">
+            <text fill="#475569" font-family="Poppins" font-size="14">Numéro de téléphone</text>
+            <rect y="20" width="460" height="40" rx="4" fill="#F8FAFC"/>
+            <text x="20" y="45" fill="#2C3E50" font-family="Poppins" font-size="14">06 12 34 56 78</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Sécurité -->
+      <g transform="translate(40, 440)">
+        <text fill="#2C3E50" font-family="Poppins" font-size="18" font-weight="600">Sécurité</text>
+        
+        <!-- Mot de passe -->
+        <g transform="translate(0, 40)">
+          <text fill="#475569" font-family="Poppins" font-size="14">Mot de passe</text>
+          <rect y="20" width="460" height="40" rx="4" fill="#F8FAFC"/>
+          <text x="20" y="45" fill="#94A3B8" font-family="Poppins" font-size="14">••••••••••</text>
+          <rect x="480" y="20" width="200" height="40" rx="4" fill="#3498DB"/>
+          <text x="580" y="45" fill="white" font-family="Poppins" font-size="14" text-anchor="middle">Modifier</text>
+        </g>
+
+        <!-- Double authentification -->
+        <g transform="translate(0, 100)">
+          <text fill="#475569" font-family="Poppins" font-size="14">Double authentification</text>
+          <rect y="20" width="460" height="40" rx="4" fill="#F8FAFC"/>
+          <text x="20" y="45" fill="#475569" font-family="Poppins" font-size="14">Désactivée</text>
+          <rect x="480" y="20" width="200" height="40" rx="4" fill="#3498DB"/>
+          <text x="580" y="45" fill="white" font-family="Poppins" font-size="14" text-anchor="middle">Activer</text>
+        </g>
+      </g>
+
+      <!-- Préférences -->
+      <g transform="translate(40, 620)">
+        <text fill="#2C3E50" font-family="Poppins" font-size="18" font-weight="600">Préférences</text>
+        
+        <!-- Notifications -->
+        <g transform="translate(0, 40)">
+          <text fill="#475569" font-family="Poppins" font-size="14">Notifications par email</text>
+          <rect y="20" width="24" height="24" rx="4" fill="#3498DB"/>
+          <text x="40" y="35" fill="#475569" font-family="Poppins" font-size="14">Recevoir les notifications de commande</text>
+        </g>
+
+        <!-- Newsletter -->
+        <g transform="translate(0, 80)">
+          <text fill="#475569" font-family="Poppins" font-size="14">Newsletter</text>
+          <rect y="20" width="24" height="24" rx="4" fill="#F8FAFC"/>
+          <text x="40" y="35" fill="#475569" font-family="Poppins" font-size="14">S'abonner à la newsletter</text>
+        </g>
+      </g>
+
+      <!-- Boutons d'action -->
+      <g transform="translate(40, 740)">
+        <path d="M0,0 H200 L190,5 V35 L200,40 H0 L10,35 V5 Z" fill="#3498DB"/>
+        <text x="100" y="25" fill="white" font-family="Poppins" font-size="14" text-anchor="middle" font-weight="600">
+          Enregistrer
+        </text>
+      </g>
+    </g>
+  </g>
+</svg> 
