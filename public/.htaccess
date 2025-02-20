@@ -2,7 +2,7 @@ RewriteEngine On
 Options -Indexes
 
 # Rediriger les requêtes vers le dossier public
-RewriteBase /Facon_puzzle-new/
+RewriteBase /Facon_puzzle-new/public/
 
 # Ne pas rediriger les fichiers et dossiers existants
 RewriteCond %{REQUEST_FILENAME} !-d
