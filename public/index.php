@@ -7,7 +7,7 @@ use Bramus\Router\Router;
 use App\Config\Config;
 
 // Chargement des variables d'environnement
-$dotenv = Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv = Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
 
 // Chargement de la configuration
