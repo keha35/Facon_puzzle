@@ -52,14 +52,18 @@
 
 ### Page "Notre catalogue"
 
-- [ ] Interface de navigation
-  * [ ] Filtres de recherche
-  * [ ] Système de tri
-  * [ ] Pagination
-- [ ] Fiches produits
-  * [ ] Galerie d'images
-  * [ ] Description détaillée
-  * [ ] Prix et disponibilité
+- [x] Interface de navigation
+  * [x] Filtres de recherche
+  * [x] Système de tri
+  * [x] Pagination
+- [x] Fiches produits
+  * [x] Galerie d'images
+  * [x] Description détaillée
+  * [x] Prix et disponibilité
+- [ ] **Fonctionnalités spécifiques**
+  * [ ] Système de filtrage dynamique
+  * [ ] Aperçu rapide des produits
+  * [ ] Gestion des stocks en temps réel
 
 ### Page "Panier"
 

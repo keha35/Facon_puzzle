@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1440" height="1200" viewBox="0 0 1440 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Header -->
+  <rect width="1440" height="80" fill="#2C3E50"/>
+  <text x="40" y="50" fill="white" font-family="Montserrat" font-size="24" font-weight="bold">Façon Puzzle</text>
+
+  <!-- Fil d'Ariane -->
+  <g transform="translate(40, 100)">
+    <text fill="#64748B" font-family="Poppins" font-size="14">
+      <tspan x="0" y="0">Accueil</tspan>
+      <tspan x="60" y="0" fill="#94A3B8"> / </tspan>
+      <tspan x="80" y="0" fill="#2C3E50" font-weight="600">Notre catalogue</tspan>
+    </text>
+  </g>
+
+  <!-- Barre de filtres -->
+  <g transform="translate(40, 140)">
+    <rect width="300" height="800" rx="8" fill="white" filter="drop-shadow(0 4px 6px rgb(0 0 0 / 0.1))"/>
+    
+    <!-- Recherche -->
+    <g transform="translate(20, 20)">
+      <text fill="#2C3E50" font-family="Poppins" font-size="16" font-weight="600">Rechercher</text>
+      <rect y="20" width="260" height="40" rx="20" fill="#F8FAFC"/>
+      <circle cx="240" cy="40" r="8" fill="#64748B"/>
+    </g>
+
+    <!-- Catégories -->
+    <g transform="translate(20, 100)">
+      <text fill="#2C3E50" font-family="Poppins" font-size="16" font-weight="600">Catégories</text>
+      <g transform="translate(0, 30)">
+        <rect width="260" height="40" rx="4" fill="#3498DB"/>
+        <text x="20" y="25" fill="white" font-family="Poppins" font-size="14">Puzzles classiques</text>
+        <rect y="50" width="260" height="40" rx="4" fill="#F8FAFC"/>
+        <text x="20" y="75" fill="#475569" font-family="Poppins" font-size="14">Puzzles 3D</text>
+        <rect y="100" width="260" height="40" rx="4" fill="#F8FAFC"/>
+        <text x="20" y="125" fill="#475569" font-family="Poppins" font-size="14">Collections spéciales</text>
+      </g>
+    </g>
+
+    <!-- Prix -->
+    <g transform="translate(20, 300)">
+      <text fill="#2C3E50" font-family="Poppins" font-size="16" font-weight="600">Prix</text>
+      <g transform="translate(0, 30)">
+        <rect width="260" height="80" rx="8" fill="#F8FAFC"/>
+        <g transform="translate(20, 20)">
+          <rect width="220" height="4" fill="#E2E8F0" rx="2"/>
+          <rect width="120" height="4" fill="#3498DB" rx="2"/>
+          <circle cx="120" cy="2" r="8" fill="#3498DB"/>
+          <text x="0" y="30" fill="#475569" font-family="Poppins" font-size="14">20€</text>
+          <text x="220" y="30" fill="#475569" font-family="Poppins" font-size="14" text-anchor="end">100€</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Nombre de pièces -->
+    <g transform="translate(20, 420)">
+      <text fill="#2C3E50" font-family="Poppins" font-size="16" font-weight="600">Nombre de pièces</text>
+      <g transform="translate(0, 30)">
+        <rect width="260" height="40" rx="4" fill="#F8FAFC"/>
+        <text x="20" y="25" fill="#475569" font-family="Poppins" font-size="14">0-100 pièces (Facile)</text>
+        <rect y="50" width="260" height="40" rx="4" fill="#3498DB"/>
+        <text x="20" y="75" fill="white" font-family="Poppins" font-size="14">100-500 pièces (Intermédiaire)</text>
+        <rect y="100" width="260" height="40" rx="4" fill="#F8FAFC"/>
+        <text x="20" y="125" fill="#475569" font-family="Poppins" font-size="14">500+ pièces (Expert)</text>
+      </g>
+    </g>
+
+    <!-- Matériaux -->
+    <g transform="translate(20, 600)">
+      <text fill="#2C3E50" font-family="Poppins" font-size="16" font-weight="600">Matériaux</text>
+      <g transform="translate(0, 30)">
+        <rect width="260" height="40" rx="4" fill="#F8FAFC"/>
+        <text x="20" y="25" fill="#475569" font-family="Poppins" font-size="14">Standard (Carton)</text>
+        <rect y="50" width="260" height="40" rx="4" fill="#3498DB"/>
+        <text x="20" y="75" fill="white" font-family="Poppins" font-size="14">Premium (Bois)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Grille de produits -->
+  <g transform="translate(380, 140)">
+    <!-- En-tête -->
+    <g>
+      <text fill="#2C3E50" font-family="Poppins" font-size="24" font-weight="600">Notre catalogue</text>
+      <text x="200" y="0" fill="#64748B" font-family="Poppins" font-size="16">(24 produits)</text>
+      
+      <!-- Tri -->
+      <g transform="translate(700, -10)">
+        <rect width="320" height="40" rx="20" fill="#F8FAFC"/>
+        <text x="20" y="25" fill="#475569" font-family="Poppins" font-size="14">Trier par : Plus récents</text>
+        <circle cx="280" cy="20" r="8" fill="#64748B"/>
+      </g>
+    </g>
+
+    <!-- Grille -->
+    <g transform="translate(0, 60)">
+      <!-- Première ligne -->
+      <g>
+        <!-- Carte 1 -->
+        <g>
+          <rect width="320" height="400" rx="8" fill="white" filter="drop-shadow(0 4px 6px rgb(0 0 0 / 0.1))"/>
+          <rect x="10" y="10" width="300" height="240" rx="4" fill="#F8FAFC"/>
+          <text x="20" y="280" fill="#2C3E50" font-family="Poppins" font-size="16" font-weight="600">Puzzle Nature</text>
+          <text x="20" y="310" fill="#475569" font-family="Poppins" font-size="14">500 pièces • Premium</text>
+          <text x="20" y="340" fill="#2C3E50" font-family="Poppins" font-size="18" font-weight="600">49,99 €</text>
+          <g transform="translate(10, 360)">
+            <path d="M0,0 H300 L290,5 V35 L300,40 H0 L10,35 V5 Z" fill="#3498DB"/>
+            <text x="150" y="25" fill="white" font-family="Poppins" font-size="14" text-anchor="middle" font-weight="600">
+              Ajouter au panier
+            </text>
+          </g>
+        </g>
+
+        <!-- Carte 2 -->
+        <g transform="translate(340, 0)">
+          <rect width="320" height="400" rx="8" fill="white" filter="drop-shadow(0 4px 6px rgb(0 0 0 / 0.1))"/>
+          <rect x="10" y="10" width="300" height="240" rx="4" fill="#F8FAFC"/>
+          <text x="20" y="280" fill="#2C3E50" font-family="Poppins" font-size="16" font-weight="600">Puzzle Ville</text>
+          <text x="20" y="310" fill="#475569" font-family="Poppins" font-size="14">1000 pièces • Standard</text>
+          <text x="20" y="340" fill="#2C3E50" font-family="Poppins" font-size="18" font-weight="600">39,99 €</text>
+          <g transform="translate(10, 360)">
+            <path d="M0,0 H300 L290,5 V35 L300,40 H0 L10,35 V5 Z" fill="#3498DB"/>
+            <text x="150" y="25" fill="white" font-family="Poppins" font-size="14" text-anchor="middle" font-weight="600">
+              Ajouter au panier
+            </text>
+          </g>
+        </g>
+
+        <!-- Carte 3 -->
+        <g transform="translate(680, 0)">
+          <rect width="320" height="400" rx="8" fill="white" filter="drop-shadow(0 4px 6px rgb(0 0 0 / 0.1))"/>
+          <rect x="10" y="10" width="300" height="240" rx="4" fill="#F8FAFC"/>
+          <text x="20" y="280" fill="#2C3E50" font-family="Poppins" font-size="16" font-weight="600">Puzzle Art</text>
+          <text x="20" y="310" fill="#475569" font-family="Poppins" font-size="14">300 pièces • Premium</text>
+          <text x="20" y="340" fill="#2C3E50" font-family="Poppins" font-size="18" font-weight="600">44,99 €</text>
+          <g transform="translate(10, 360)">
+            <path d="M0,0 H300 L290,5 V35 L300,40 H0 L10,35 V5 Z" fill="#3498DB"/>
+            <text x="150" y="25" fill="white" font-family="Poppins" font-size="14" text-anchor="middle" font-weight="600">
+              Ajouter au panier
+            </text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Deuxième ligne -->
+      <g transform="translate(0, 420)">
+        <!-- Répétition des cartes avec variations -->
+        <!-- ... Cartes similaires avec contenus différents ... -->
+      </g>
+    </g>
+
+    <!-- Pagination -->
+    <g transform="translate(400, 900)">
+      <rect width="40" height="40" rx="4" fill="#F8FAFC"/>
+      <text x="20" y="25" fill="#475569" font-family="Poppins" font-size="14" text-anchor="middle">1</text>
+      <rect x="50" width="40" height="40" rx="4" fill="#3498DB"/>
+      <text x="70" y="25" fill="white" font-family="Poppins" font-size="14" text-anchor="middle">2</text>
+      <rect x="100" width="40" height="40" rx="4" fill="#F8FAFC"/>
+      <text x="120" y="25" fill="#475569" font-family="Poppins" font-size="14" text-anchor="middle">3</text>
+    </g>
+  </g>
+</svg> 
