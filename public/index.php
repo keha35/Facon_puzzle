@@ -4,19 +4,41 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use Dotenv\Dotenv;
 use Bramus\Router\Router;
+use App\Config\Config;
 
 // Chargement des variables d'environnement
 $dotenv = Dotenv::createImmutable(__DIR__ . '/..');
 $dotenv->load();
 
+// Chargement de la configuration
+Config::load();
+
 // Configuration de base
 error_reporting(E_ALL);
-ini_set('display_errors', $_ENV['APP_DEBUG'] === 'true' ? '1' : '0');
+ini_set('display_errors', Config::get('app.debug') ? '1' : '0');
+date_default_timezone_set(Config::get('app.timezone'));
 
-// Création du dossier de cache Twig s'il n'existe pas
-$twigCacheDir = __DIR__ . '/../var/cache/twig';
-if (!is_dir($twigCacheDir)) {
-    mkdir($twigCacheDir, 0777, true);
+// Configuration des sessions
+session_name(Config::get('app.session.name'));
+session_set_cookie_params([
+    'lifetime' => Config::get('app.session.lifetime'),
+    'path' => '/',
+    'secure' => Config::get('app.session.secure'),
+    'httponly' => Config::get('app.session.httponly'),
+    'samesite' => Config::get('app.session.samesite')
+]);
+session_start();
+
+// Création des dossiers nécessaires
+$directories = [
+    Config::get('app.cache.path'),
+    Config::get('app.uploads.directory')
+];
+
+foreach ($directories as $directory) {
+    if (!is_dir($directory)) {
+        mkdir($directory, 0777, true);
+    }
 }
 
 // Initialisation du routeur

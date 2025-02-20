@@ -9,7 +9,7 @@
 - [ ] Création de la structure du projet
   * [x] Organisation des dossiers (MVC)
   * [x] Configuration du routeur
-  * [ ] Mise en place des fichiers de configuration
+  * [x] Mise en place des fichiers de configuration
 - [ ] **Spécifications techniques**
   * [ ] Choix du framework backend (par exemple, Laravel, Symfony)
   * [ ] Choix du framework frontend (par exemple, Vue.js, React)
