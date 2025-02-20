@@ -2,18 +2,18 @@
 
 ## 1. Configuration initiale du projet
 
-- [ ] Mise en place de l'environnement de développement
+- [x] Mise en place de l'environnement de développement
   * [x] Installation de XAMPP/PHP
   * [x] Configuration de la base de données MySQL
   * [x] Installation des dépendances nécessaires
-- [ ] Création de la structure du projet
+- [x] Création de la structure du projet
   * [x] Organisation des dossiers (MVC)
   * [x] Configuration du routeur
   * [x] Mise en place des fichiers de configuration
-- [ ] **Spécifications techniques**
-  * [ ] Choix du framework backend (par exemple, Laravel, Symfony)
-  * [ ] Choix du framework frontend (par exemple, Vue.js, React)
-  * [ ] Sélection des bibliothèques pour les fonctionnalités spécifiques (par exemple, Three.js pour la 3D)
+- [x] **Spécifications techniques**
+  * [x] Choix du framework backend (par exemple, Laravel, Symfony)
+  * [x] Choix du framework frontend (par exemple, Vue.js, React)
+  * [x] Sélection des bibliothèques pour les fonctionnalités spécifiques (par exemple, Three.js pour la 3D)
 
 ## 2. Développement Frontend
 
