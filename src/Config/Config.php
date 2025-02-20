@@ -12,7 +12,14 @@ class Config
         self::$config['database'] = require __DIR__ . '/database.config.php';
     }
 
-    public static function get(string $key, mixed $default = null): mixed
+    /**
+     * Get a configuration value
+     * 
+     * @param string $key
+     * @param mixed $default
+     * @return mixed
+     */
+    public static function get(string $key, $default = null)
     {
         if (empty(self::$config)) {
             self::load();
@@ -31,7 +38,14 @@ class Config
         return $config;
     }
 
-    public static function set(string $key, mixed $value): void
+    /**
+     * Set a configuration value
+     * 
+     * @param string $key
+     * @param mixed $value
+     * @return void
+     */
+    public static function set(string $key, $value): void
     {
         if (empty(self::$config)) {
             self::load();
@@ -50,6 +64,12 @@ class Config
         $config = $value;
     }
 
+    /**
+     * Check if a configuration value exists
+     * 
+     * @param string $key
+     * @return bool
+     */
     public static function has(string $key): bool
     {
         if (empty(self::$config)) {
