@@ -22,9 +22,9 @@
 - [x] Création du layout principal
   * [x] Header avec navigation
   * [x] Footer avec informations légales
-- [ ] Implémentation des boutons style puzzle
-  * [ ] Animation CSS des pièces
-  * [ ] Effets de hover
+- [x] Implémentation des boutons style puzzle
+  * [x] Animation CSS des pièces
+  * [x] Effets de hover
 - [ ] Intégration des icônes panier/compte
 - [ ] Animation de la pièce de puzzle décorative
 - [ ] **Détails de l'interface utilisateur**
