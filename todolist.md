@@ -7,7 +7,7 @@
   * [x] Configuration de la base de données MySQL
   * [x] Installation des dépendances nécessaires
 - [ ] Création de la structure du projet
-  * [ ] Organisation des dossiers (MVC)
+  * [x] Organisation des dossiers (MVC)
   * [ ] Configuration du routeur
   * [ ] Mise en place des fichiers de configuration
 - [ ] **Spécifications techniques**

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Façon Puzzle{% endblock %}</title>
+    <meta name="description" content="{% block description %}Créez vos puzzles personnalisés uniques{% endblock %}">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/creations">Vos Créations</a></li>
+                <li><a href="/catalogue">Notre Catalogue</a></li>
+                <li><a href="/panier">Panier</a></li>
+                <li><a href="/compte">Mon Compte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>Façon Puzzle - Créez vos puzzles personnalisés</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens utiles</h3>
+                <ul>
+                    <li><a href="/mentions-legales">Mentions légales</a></li>
+                    <li><a href="/cgv">CGV</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ "now"|date("Y") }} Façon Puzzle. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/app.js"></script>
+    {% block javascripts %}{% endblock %}
+</body>
+</html> 
