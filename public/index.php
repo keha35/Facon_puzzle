@@ -7,7 +7,17 @@ use Bramus\Router\Router;
 use App\Config\Config;
 
 // Chargement des variables d'environnement
-$dotenv = Dotenv::createImmutable(dirname(__DIR__));
+$envPath = dirname(__DIR__);
+if (!file_exists($envPath . '/.env')) {
+    // Si le fichier .env n'existe pas, copier le .env.example
+    if (file_exists($envPath . '/.env.example')) {
+        copy($envPath . '/.env.example', $envPath . '/.env');
+    } else {
+        die('Le fichier .env.example est manquant. Veuillez le créer à partir de la documentation.');
+    }
+}
+
+$dotenv = Dotenv::createImmutable($envPath);
 $dotenv->load();
 
 // Chargement de la configuration
