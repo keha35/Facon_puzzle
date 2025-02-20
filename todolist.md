@@ -19,9 +19,9 @@
 
 ### Page d'accueil
 
-- [ ] Création du layout principal
-  * [ ] Header avec navigation
-  * [ ] Footer avec informations légales
+- [x] Création du layout principal
+  * [x] Header avec navigation
+  * [x] Footer avec informations légales
 - [ ] Implémentation des boutons style puzzle
   * [ ] Animation CSS des pièces
   * [ ] Effets de hover
